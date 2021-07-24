@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import "./ChatRoom.css";
 import { DefaultButton } from '@fluentui/react/lib/Button';
 import firebase from "firebase";
-import { db } from '../../firebase';
+import { db, auth } from '../../firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 function ChatInput({ chatRef, channelName, channelId }) {
     const [input, setInput] = useState("");
+    const [user] = useAuthState(auth)
     const sendMessage = e => {
         e.preventDefault();
 
@@ -16,8 +18,8 @@ function ChatInput({ chatRef, channelName, channelId }) {
         db.collection("rooms").doc(channelId).collection("message").add({
             message: input,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-            user: "Tanisha",
-            userImage: "https://www.bollywoodhungama.com/wp-content/uploads/2020/07/Alia-Bhatt-must-speak-up-now-as-trolling-gets-intense.jpeg"
+            user: user.displayName,
+            userImage: user.photoURL,
         });
 
         chatRef?.current?.scrollIntoView({
