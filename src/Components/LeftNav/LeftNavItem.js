@@ -2,8 +2,11 @@ import React from 'react'
 import { Icon } from '@fluentui/react/lib/Icon';
 import "./LeftNav.css";
 import { db } from '../../firebase';
+import { useDispatch } from 'react-redux';
+import { roomSelected } from '../../features/appSlice';
 
-function LeftNavItem({ iconName, title, addChannelOption }) {
+function LeftNavItem({ iconName, title, addChannelOption, id }) {
+    const dispatch = useDispatch();
     const addChannel = () => {
         const channelName = prompt("enter channel name");
         if (channelName) {
@@ -14,7 +17,11 @@ function LeftNavItem({ iconName, title, addChannelOption }) {
      };
     
     const selectChannel = () => {
-        
+        if (id) {
+            dispatch(roomSelected({
+                roomId: id,
+            }))
+        }
      };
 
     return (
