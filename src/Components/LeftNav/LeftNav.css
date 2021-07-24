@@ -1,0 +1,77 @@
+.leftNavHeaderContainer {
+    display: flex;
+    border-bottom: 1px solid #49234b;
+    padding: 13px;
+}
+
+.leftNavContainer {
+    background-color: var(--slack-theme-color);
+    flex: 0.3;
+    color: white;
+    margin-top: 60px;
+    max-width: 260px;
+    border-top: 1px solid #49234b;
+}
+.leftNavContainer > hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #49274b;
+}
+ .MessageIconStyle {
+     background-color: white;
+     color: #49234b;
+     font-size: 11px;
+     border-radius: 999px;
+     padding: 8px;
+     height:10px;
+     width: 10px;
+ }
+
+ .headerInfo {
+     flex: 1;
+ }
+
+ .headerInfo > h2 {
+     font-size: 15px;
+     font-weight: 900;
+     margin-bottom: 5px;
+}
+
+.headerInfo > h3 {
+    display: flex;
+    font-size: 13px;
+    font-weight: 400;
+    align-items: center;
+
+}
+
+.presenceIconStyle {
+    font-size: 10px;
+    margin-top: 1px;
+    margin-right: 2px;
+    color: green;
+}
+
+.itemContainer {
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    padding:5px;
+    padding-left: 2px;
+    cursor: pointer;
+}
+.itemContainer:hover {
+    opacity: 0.9;
+    background-color: #340e36;
+}
+.itemContainer > h3 {
+font-weight: 500;
+}
+.itemContainer > h3 > span {
+    padding: 15px;
+}
+
+.itemChannelTitle {
+    padding: 10px 0;
+    font-weight: 300;
+}
