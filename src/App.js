@@ -6,6 +6,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import SlackHomePage from './Components/SlackHomePage/SlackHomePage';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <>
           <Switch>
             <Route path="/">
-              <h1>This is home page</h1>
+              <SlackHomePage />
             </Route>
           </Switch>
         </>

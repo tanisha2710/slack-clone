@@ -1,0 +1,57 @@
+.headerContainer{
+    display: flex;
+    background-color: var(--slack-theme-color);
+    position: fixed;
+    width:100%;
+    align-items: center;
+    padding: 10px 0;
+    color: white;
+}
+
+.headerLeft {
+    display: flex;
+    flex: 0.3;
+    align-items: center;
+    margin-left: 25px;
+} 
+
+.iconStyle {
+    margin-right: 30px;
+    margin-left: auto;
+}
+
+.avatar {
+    cursor: pointer;
+}
+.avatar:hover {
+    opacity: 0.8;
+}
+
+.headerMiddlerContainer {
+    display: flex;
+    flex: 0.4;
+    background-color: #421f44;
+    opacity: 1;
+    border-radius: 6px;
+    text-align: center;
+    padding: 0px 50px;
+    color: gray;
+    border: 1px gray solid;
+}
+
+.headerMiddlerContainer >input {
+    border: none;
+    background-color: transparent;
+    margin-left: 15px;
+    text-align: center;
+    min-width: 30vw;
+    outline: none;
+    color: white
+}
+
+.headerRight {
+    display: flex;
+    flex: 0.3;
+    align-items: flex-end;
+
+}
